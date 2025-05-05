@@ -147,6 +147,16 @@ jq '
 
 
 
+### Resources for Learning More
+
+- **Official Documentation**: https://jqlang.org/manual/
+- **GitHub Repository**: https://github.com/jqlang/jq
+- **JQ Playground**: https://jqplay.org/
+- **DigitalOcean Tutorial**: [How to Transform JSON Data with JQ](https://www.digitalocean.com/community/tutorials/how-to-transform-json-data-with-jq)
+- **NPM Package**: https://www.npmjs.com/package/jq-tools
+
+
+
 
 
 
