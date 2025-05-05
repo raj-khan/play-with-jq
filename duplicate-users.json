@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ABC",
+        "email": "shortdavid@yahoo.com",
+        "age": 51,
+        "gender": "Male"
+    },
+    {
+        "name": "ABC",
+        "email": "josephbass@hotmail.com",
+        "age": 53,
+        "gender": "Male"
+    },
+    {
+        "name": "CDE",
+        "email": "marissareynolds@hotmail.com",
+        "age": 34,
+        "gender": "Male"
+    },
+    {
+        "name": "CDE",
+        "email": "paul60@hotmail.com",
+        "age": 60,
+        "gender": "Female"
+    },
+    {
+        "name": "FGH",
+        "email": "bryanrose@gmail.com",
+        "age": 19,
+        "gender": "Male"
+    },
+    {
+        "name": "HIJ",
+        "email": "kingkendra@bryant.com",
+        "age": 68,
+        "gender": "Male"
+    },
+    {
+        "name": "KLI",
+        "email": "clarkheather@yahoo.com",
+        "age": 24,
+        "gender": "Male"
+    },
+    {
+        "name": "MNO",
+        "email": "jaredlucas@gmail.com",
+        "age": 58,
+        "gender": "Male"
+    },
+    {
+        "name": "PQRS",
+        "email": "krivera@yahoo.com",
+        "age": 46,
+        "gender": "Male"
+    },
+    {
+        "name": "TVU WXYZ",
+        "email": "jacksonjoseph@gmail.com",
+        "age": 60,
+        "gender": "Female"
+    }
+]
