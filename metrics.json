@@ -1,0 +1,85 @@
+{
+  "serviceMetrics": {
+    "timestamp": "2025-04-18T15:30:00Z",
+    "services": [
+      {
+        "name": "auth-service",
+        "instances": [
+          {
+            "id": "inst-1",
+            "region": "us-east",
+            "status": "healthy",
+            "responseTime": 45,
+            "errorRate": 0.02
+          },
+          {
+            "id": "inst-2",
+            "region": "us-west",
+            "status": "healthy",
+            "responseTime": 62,
+            "errorRate": 0.01
+          },
+          {
+            "id": "inst-3",
+            "region": "eu-central",
+            "status": "degraded",
+            "responseTime": 187,
+            "errorRate": 0.08
+          }
+        ]
+      },
+      {
+        "name": "api-gateway",
+        "instances": [
+          {
+            "id": "inst-4",
+            "region": "us-east",
+            "status": "healthy",
+            "responseTime": 28,
+            "errorRate": 0.01
+          },
+          {
+            "id": "inst-5",
+            "region": "us-west",
+            "status": "healthy",
+            "responseTime": 35,
+            "errorRate": 0.0
+          },
+          {
+            "id": "inst-6",
+            "region": "eu-central",
+            "status": "healthy",
+            "responseTime": 42,
+            "errorRate": 0.03
+          }
+        ]
+      },
+      {
+        "name": "user-service",
+        "instances": [
+          {
+            "id": "inst-7",
+            "region": "us-east",
+            "status": "degraded",
+            "responseTime": 156,
+            "errorRate": 0.06
+          },
+          {
+            "id": "inst-8",
+            "region": "us-west",
+            "status": "healthy",
+            "responseTime": 58,
+            "errorRate": 0.02
+          },
+          {
+            "id": "inst-9",
+            "region": "eu-central",
+            "status": "unhealthy",
+            "responseTime": 392,
+            "errorRate": 0.15
+          }
+        ]
+      }
+    ]
+  }
+}
