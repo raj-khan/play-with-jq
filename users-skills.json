@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mr X - JS Developer",
+      "role": "developer",
+      "skills": ["javascript", "typescript", "react", "nodejs"],
+      "projects": [
+        {"id": "proj-101", "name": "API Gateway", "status": "active"},
+        {"id": "proj-205", "name": "Auth Service", "status": "completed"}
+      ],
+      "joinDate": "2021-03-15"
+    },
+    {
+      "id": 2,
+      "name": "Mr. Z - DevOps Engineer",
+      "role": "devops",
+      "skills": ["kubernetes", "aws", "terraform", "nodejs"],
+      "projects": [
+        {"id": "proj-101", "name": "API Gateway", "status": "active"},
+        {"id": "proj-308", "name": "CI Pipeline", "status": "active"}
+      ],
+      "joinDate": "2020-11-22"
+    },
+    {
+      "id": 3,
+      "name": "Mr. Y - Another JS Developer",
+      "role": "developer",
+      "skills": ["typescript", "postgresql", "nestjs", "graphql"],
+      "projects": [
+        {"id": "proj-205", "name": "Auth Service", "status": "completed"},
+        {"id": "proj-512", "name": "User Dashboard", "status": "planning"}
+      ],
+      "joinDate": "2022-01-10"
+    }
+  ]
+}
