@@ -2,44 +2,73 @@
 In this NodeJS project, I've shown an example of how to play with JQ
 
 
-# BASIC USE CASE
+## Installation
 
-jq 'map(.gender) | unique' users.json    
-jq '.[] | select(.age > 20)' users.json
-jq '.[] | select(.age < 20)' users.json
+Install play-with-jq with npm
+- First clone this project then run 
+```bash
+  cd play-with-jq
+  npm install
+  npm start
+```
+    
 
-curl http://localhost:3000/api/user | jq '.'
+### BASIC USE CASE of JQ 
+
+```bash
+jq 'map(.gender) | unique' users.json  // Print unique Gender 
+jq '.[] | select(.age > 20)' users.json // Select users where age > 20
+jq '.[] | select(.age < 20)' users.json // Select users where age < 20
+
+### CURL the API and get similar output for above 
+curl http://localhost:3000/api/user | jq '.' 
+
 curl http://localhost:3000/api/user | jq '.[] | select(.age < 20)'
+
+```
 
 
 curl http://localhost:3000/api/unique-user | jq 'map(.name) | unique'
 
-Average: age: jq '{averageAge: (map(.age) | add / length)}' users.json
+### Get Average Age: 
 
-API Response Processing
+```bash
+jq '{averageAge: (map(.age) | add / length)}' users.json
+```
+
+### API Response Processing
+```bash
 curl http://localhost:3000/api/user | jq '.[] | {name, gender}'
+```
 
 
-# Find average age
+### Find average age
+```bash
 curl http://localhost:3000/api/user | jq '[.[].age] | add / length'
+```
 
-
-curl http://localhost:3000/api/user  || jq '.errors'
-
-
-PRINT as CSV
+### PRINT as CSV
+```bash
 curl http://localhost:3000/api/user | jq -r '.[] | [.name, .gender, .age] | @csv'
+```
 
 
-COUNT items
+
+### COUNT items
+```bash
 curl http://localhost:3000/api/unique-user | jq '. | length'
+```
 
-# Find developers with TypeScript skills on completed projects
+###  Find developers with TypeScript skills on completed projects
+```bash
 jq '.users[] | select(.role == "developer" and (.skills | contains(["typescript"])) and (.projects[] | select(.status == "completed") | length > 0)) | {name, projects: [.projects[] | select(.status == "completed")]}' users-skills.json
+```
 
 
 
-# Join users and projects to create a project assignment report with deadlines using -s (slupr) to combine multiple input
+#### Join users and projects to create a project assignment report with deadlines using -s (slupr) to combine multiple input
+
+```bash
 jq -s '
   [.[0].users[] as $user | 
    .[1].projects[] as $project | 
@@ -53,9 +82,12 @@ jq -s '
    }
   ] | sort_by(.deadline)
 ' users-skills.json projects.json
+```
 
 
-# Generate a health report with aggregated metrics by service and region
+
+### Generate a health report with aggregated metrics by service and region
+```bash
 jq '
   .serviceMetrics.services | 
   map({
@@ -78,9 +110,13 @@ jq '
   }) |
   sort_by(.healthScore)
 ' metrics.json
+```
 
 
-# Generate an incident report for problematic pods with restart counts and error details
+
+### Generate an incident report for problematic pods with restart counts and error details
+
+```bash
 jq '
   .items | 
   map(select(.status.phase != "Running" or 
@@ -107,6 +143,8 @@ jq '
     ]
   })
 ' pods.json
+```
+
 
 
 
