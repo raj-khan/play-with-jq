@@ -1,0 +1,106 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2025-04-15T10:25:31Z",
+        "labels": {
+          "app": "api-gateway",
+          "environment": "production",
+          "tier": "frontend"
+        },
+        "name": "api-gateway-75d9f8d7b6-x7zcp",
+        "namespace": "default"
+      },
+      "status": {
+        "containerStatuses": [
+          {
+            "containerID": "containerd://1a2b3c4d5e6f",
+            "image": "company/api-gateway:v1.2.3",
+            "name": "api-gateway",
+            "ready": true,
+            "restartCount": 0,
+            "state": {
+              "running": {
+                "startedAt": "2025-04-15T10:26:12Z"
+              }
+            }
+          }
+        ],
+        "phase": "Running",
+        "podIP": "10.0.15.12"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2025-04-15T10:25:31Z",
+        "labels": {
+          "app": "auth-service",
+          "environment": "production",
+          "tier": "backend"
+        },
+        "name": "auth-service-5b8d9c7f45-jkl23",
+        "namespace": "default"
+      },
+      "status": {
+        "containerStatuses": [
+          {
+            "containerID": "containerd://7g8h9i0j1k2l",
+            "image": "company/auth-service:v2.0.1",
+            "name": "auth-service",
+            "ready": false,
+            "restartCount": 3,
+            "state": {
+              "waiting": {
+                "message": "Back-off pulling image",
+                "reason": "CrashLoopBackOff"
+              }
+            }
+          }
+        ],
+        "phase": "Pending",
+        "podIP": "10.0.15.13"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Pod",
+      "metadata": {
+        "creationTimestamp": "2025-04-14T09:12:05Z",
+        "labels": {
+          "app": "postgres",
+          "environment": "production",
+          "tier": "database"
+        },
+        "name": "postgres-0",
+        "namespace": "default"
+      },
+      "status": {
+        "containerStatuses": [
+          {
+            "containerID": "containerd://3m4n5o6p7q8r",
+            "image": "postgres:14.2",
+            "name": "postgres",
+            "ready": true,
+            "restartCount": 0,
+            "state": {
+              "running": {
+                "startedAt": "2025-04-14T09:13:22Z"
+              }
+            }
+          }
+        ],
+        "phase": "Running",
+        "podIP": "10.0.15.10"
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}
